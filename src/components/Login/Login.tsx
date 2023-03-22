@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, SafeAreaView } from 'react-native';
-import useAuth from '../../hooks/useAuth';
+import useGoogleSignin from '../../hooks/auth/useGoogleSignin';
 import styles from './styles';
 
 const Login = () => {
-  const { signIn } = useAuth();
+  const { mutate: signIn } = useGoogleSignin();
 
   return (
     <SafeAreaView style={styles.mainWrap}>
