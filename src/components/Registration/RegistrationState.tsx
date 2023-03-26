@@ -33,14 +33,17 @@ const RegistrationContextProvider: FC<{ children: ReactNode }> = ({ children }) 
     setDataUploading(true);
     try {
       console.log('userState');
-      console.log(userState);
+      console.log(userState.bio);
+      console.log(userState.name);
+      console.log(userState.gender);
+      console.log(userState.targetGender);
+      console.log(userState.dateOfBirth);
       await functions().httpsCallable('updateUserProfile')({
         ...userState,
-        sexualOrientation: 'homosexual', // TODO: remove
       });
     } catch (err) {
       console.log('error when submitting registration form');
-      console.log(JSON.stringify(err));
+      console.log(err);
     }
     setDataUploading(false);
   }, [userState]);
