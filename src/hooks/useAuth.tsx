@@ -36,24 +36,9 @@ export const AuthProvider = (props: { children: JSX.Element }) => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log('auth().currentUser');
-    console.log(auth().currentUser);
+    // console.log('auth().currentUser');
+    // console.log(auth().currentUser);
     auth().onAuthStateChanged((authUser) => {
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log('on auth change');
-      // console.log(authUser);
       if (authUser) {
         setUser(authUser);
         firestore()

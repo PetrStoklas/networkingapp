@@ -14,9 +14,9 @@ const Tab = createBottomTabNavigator();
 const Main = () => {
   return (
     <Tab.Navigator tabBar={(props) => <AnimatedTabBar {...props} />} screenOptions={{ headerShown: false }}>
-      <Tab.Screen name={routesConstants.matching()} component={Matching} options={{ tabBarIcon: HomeIcon }} />
-      <Tab.Screen name={routesConstants.chat()} component={Chat} options={{ tabBarIcon: ChatIcon }} />
-      <Tab.Screen name={routesConstants.settings()} component={Settings} options={{ tabBarIcon: SettingsIcon }} />
+      <Tab.Screen name={routesConstants.matching} component={Matching} options={{ tabBarIcon: HomeIcon }} />
+      <Tab.Screen name={routesConstants.chat} component={Chat} options={{ tabBarIcon: ChatIcon }} />
+      <Tab.Screen name={routesConstants.settings} component={Settings} options={{ tabBarIcon: SettingsIcon }} />
     </Tab.Navigator>
   );
 };

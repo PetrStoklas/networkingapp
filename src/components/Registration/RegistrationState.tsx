@@ -32,6 +32,8 @@ const RegistrationContextProvider: FC<{ children: ReactNode }> = ({ children }) 
   const onSubmit = useCallback(async () => {
     setDataUploading(true);
     try {
+      console.log('userState');
+      console.log(userState);
       await functions().httpsCallable('updateUserProfile')({
         ...userState,
         sexualOrientation: 'homosexual', // TODO: remove

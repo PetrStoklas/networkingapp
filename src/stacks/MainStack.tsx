@@ -13,9 +13,9 @@ const MainStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {isLoggedIn ? (
-        <Stack.Screen name={routeConstants.loggedin()} component={LoggedInStack} />
+        <Stack.Screen name={routeConstants.loggedin} component={LoggedInStack} />
       ) : (
-        <Stack.Screen name={routeConstants.login()} component={Login} />
+        <Stack.Screen name={routeConstants.login} component={Login} />
       )}
     </Stack.Navigator>
   );

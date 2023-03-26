@@ -6,7 +6,7 @@ const Stack = createNativeStackNavigator();
 
 const LoginStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name={routeConstants.login()} component={Login} />
+    <Stack.Screen name={routeConstants.login} component={Login} />
   </Stack.Navigator>
 );
 export default LoginStack;

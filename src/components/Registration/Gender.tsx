@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import styles from './styles';
-import { GenderType, RegistrationRoutes } from './types';
+import { RegistrationRoutes } from './types';
+import { GenderType } from '../../types/user';
 import { Button, Checkbox, Text, Surface } from 'react-native-paper';
 import { View } from 'react-native';
 import { useRegistrationContext } from './RegistrationState';

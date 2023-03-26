@@ -13,9 +13,9 @@ const LoggedInStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {hasCompleteProfile ? (
-        <Stack.Screen name={routeConstants.registered()} component={RegisteredStack} />
+        <Stack.Screen name={routeConstants.registered} component={RegisteredStack} />
       ) : (
-        <Stack.Screen name={routeConstants.registration()} component={RegistrationStack} />
+        <Stack.Screen name={routeConstants.registration} component={RegistrationStack} />
       )}
     </Stack.Navigator>
   );

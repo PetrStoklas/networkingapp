@@ -24,7 +24,12 @@ const Uploading = () => {
         await onSubmit();
         console.log('on submit success');
         // TODO: make it navigate when the smile is in correct position
-        navigation.navigate(routesConstants.registered());
+        navigation.navigate(routesConstants.loggedin, {
+          screen: routesConstants.registered,
+          params: {
+            screen: routesConstants.matching,
+          },
+        });
       } catch (err) {
         console.log('error when submitting registration data');
         console.log(JSON.stringify(err));
