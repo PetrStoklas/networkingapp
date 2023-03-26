@@ -3,9 +3,10 @@ import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
 import { GenderType } from '../types/user';
+import { REACT_APP_GOOGLE_CLIENT_ID } from '@env';
 
 GoogleSignin.configure({
-  webClientId: '408153506365-qki5tqtrngqulerhml54lo7fvq8intah.apps.googleusercontent.com',
+  webClientId: REACT_APP_GOOGLE_CLIENT_ID,
 });
 
 interface Profile {
@@ -14,7 +15,8 @@ interface Profile {
   images: string[];
   gender: GenderType;
   targetGender: GenderType;
-  dateOfBirth: any; // TODO: specify
+  dateOfBirth: any; // TODO: specify,
+  hasCompleteProfile: boolean;
 }
 
 export interface AuthContext {
